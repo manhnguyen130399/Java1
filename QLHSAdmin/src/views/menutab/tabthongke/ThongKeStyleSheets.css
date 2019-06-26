@@ -1,0 +1,34 @@
+/*PhuHuynhs stylesheets file*/
+
+.scroll-pane{
+    -fx-background-color: transparent;
+    -fx-min-width: 0;
+}
+
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .corner{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .track{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .thumb{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .decrement-button .decrement-arrow{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .increment-button .increment-arrow{
+    -fx-background-color: black;
+}

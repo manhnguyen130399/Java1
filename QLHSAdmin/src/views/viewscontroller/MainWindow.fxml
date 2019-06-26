@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpaneRoot" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="border-pane-root" stylesheets="@MainWindowStylesheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.viewscontroller.MainWindowController">
+   <center>
+      <StackPane fx:id="stackpaneContent" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <BorderPane fx:id="borderpaneContent" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" styleClass="anchor-pane-title" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="buttonMove" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" styleClass="button-title" text="Phần mềm quản lí học sinh" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <tooltip>
+                              <Tooltip text="Move" />
+                           </tooltip>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <JFXButton fx:id="buttonResize" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" styleClass="button-resize" StackPane.alignment="BOTTOM_RIGHT">
+               <graphic>
+                  <MaterialDesignIconView glyphName="RESIZE_BOTTOM_RIGHT" size="25" textAlignment="CENTER" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Rssize" />
+               </tooltip>
+            </JFXButton>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="75.0" StackPane.alignment="TOP_RIGHT">
+               <children>
+                  <JFXButton fx:id="buttonMinimize" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" size="25" textAlignment="CENTER" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Minimize" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonMaximize" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="60.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <MaterialDesignIconView fx:id="mdivMaximize" glyphName="WINDOW_MAXIMIZE" size="25" textAlignment="CENTER" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Maximize" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonClose" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="60.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="WINDOW_CLOSE" size="25" textAlignment="CENTER" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Close" />
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

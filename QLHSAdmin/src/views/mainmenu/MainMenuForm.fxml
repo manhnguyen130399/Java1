@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="borderpaneRoot" prefHeight="600.0" prefWidth="800.0" styleClass="border-pane" stylesheets="@MainMenuFormStylesheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.mainmenu.MainMenuFormController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <JFXTabPane fx:id="tabpaneContent" focusTraversable="false" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+                     <tabs>
+                        <Tab closable="false">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="MENU" size="30" />
+                           </graphic>
+                           <content>
+                              <BorderPane fx:id="borderpaneMenu" prefHeight="800.0" prefWidth="800.0" styleClass="border-pane">
+                                 <center>
+                                    <ScrollPane fx:id="scrollpaneContent" fitToWidth="true" hbarPolicy="NEVER" pannable="true" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <JFXMasonryPane fx:id="masonrypaneContent" limitRow="10000">
+                                             <children>
+                                                <ToggleButton fx:id="togglebuttonAccountses" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách tài khoản" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#1aff00" glyphName="ACCOUNT_MULTIPLE" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonGiaoViens" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách giáo viên" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#002bff" glyphName="OWL" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonHanhKiems" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách hạnh kiểm" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#b92323" glyphName="BARREL" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonHocKi_NamHocs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách học kì năm học" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#5000ff" glyphName="CALENDAR" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonHocLucs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="460.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách học lực" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#b92323" glyphName="BORDER_COLOR" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonLops" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách lớp, phân công chủ nhiệm và phân công giảng dạy" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ff009a" glyphName="CITY" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonMonHocs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách môn học" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#30ff00" glyphName="BOOK_MULTIPLE" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonCOs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách và Lí lịch học sinh" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="BLUE" glyphName="CAT" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonHocs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Xếp lớp cho học sinh" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="RED" glyphName="CODE_EQUAL" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonKTs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Quản lí điểm" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ffdf00" glyphName="TOR" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonKQs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Tổng kết" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ffaf00" glyphName="WHITE_BALANCE_SUNNY" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonThongKe" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Thống kê" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#fa00ff" glyphName="CHART_AREASPLINE" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonOpenAll" contentDisplay="TOP" graphicTextGap="0.0" layoutX="460.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Open All" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#00ff20" glyphName="WINDOW_OPEN" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonCloseAll" contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Close All" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ff00e4" glyphName="WINDOW_CLOSED" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonBack" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="685.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Trở về" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ff00e4" glyphName="STEP_BACKWARD_2" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                             </children>
+                                          </JFXMasonryPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                              </BorderPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="tableView" editable="true" stylesheets="@AccountsesTableForm.css" tableMenuButtonVisible="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabaccountses.AccountsesTableFormController">
+    <columns>
+        <TableColumn fx:id="tablecolumnUsername" prefWidth="75.0" text="Username" />
+        <TableColumn fx:id="tablecolumnPassword" prefWidth="75.0" text="Password" />
+        <TableColumn fx:id="tablecolumnDisplayname" prefWidth="75.0" text="Displayname" />
+        <TableColumn fx:id="tablecolumnType" prefWidth="75.0" text="Type" />
+        <TableColumn fx:id="tablecolumnMaGV" prefWidth="75.0" text="Mã giáo viên" />
+    </columns>
+   <columnResizePolicy>
+      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+   </columnResizePolicy>
+</TableView>

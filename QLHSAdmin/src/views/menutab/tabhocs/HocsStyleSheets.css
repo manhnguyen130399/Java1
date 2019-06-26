@@ -1,0 +1,195 @@
+/*HocSinhs stylesheets file*/
+
+.toggle-button{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.toggle-button:hover{
+    -fx-background-color: #00000050;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected{
+    -fx-background-color: #40404050;
+    -fx-text-fill: black;
+}
+
+.toggle-button:selected:hover{
+    -fx-background-color: #40404080;
+    -fx-text-fill: gray;
+}
+
+.toggle-button-line-selected{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+}
+
+.toggle-button-line-selected:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+}
+
+.toggle-button-line-selected:selected{
+    -fx-background-color: yellowgreen;
+}
+
+.toggle-button-line-selected:selected:hover{
+    -fx-background-color: yellowgreen;
+}
+
+.border-pane-menu{
+    -fx-background-color: rgba(200,200,200,0.1);
+}
+
+.toggle-button-menu{
+    -fx-background-color: rgba(200,200,200,0.1);
+    -fx-text-fill: white;
+}
+
+.toggle-button-menu:hover{
+    -fx-background-color: rgba(200,200,200,0.75);
+    -fx-text-fill: green;
+}
+
+.toggle-button-menu:selected{
+    -fx-background-color: rgba(200,200,200,0.5);
+    -fx-text-fill: yellow;
+}
+
+.toggle-button-menu:selected:hover{
+    -fx-background-color: rgba(200,200,200,0.65);
+    -fx-text-fill: greenyellow;
+}
+
+.button{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.button:hover{
+    -fx-background-color: #00000050;
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label{
+    -fx-text-fill: #bfa8a8;
+}
+
+.text-field{
+    -fx-background-color: transparent;
+    -fx-text-fill: yellowgreen;
+    -fx-font-size: 12;
+}
+
+.text-area{
+    -fx-background-color: transparent;
+    -fx-text-fill: #bfa8a8;
+    -fx-font-size: 12;
+}
+
+.text-area .scroll-pane.viewport{
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .corner{
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane{
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport .content{
+    -fx-background-color: transparent;
+}
+
+.password-field{
+    -fx-background-color: transparent;
+    -fx-text-fill: yellowgreen;
+}
+
+.scroll-pane{
+    -fx-background-color: transparent;
+    -fx-min-width: 0;
+}
+
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .corner{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .track{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .thumb{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .decrement-button .decrement-arrow{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .increment-button .increment-arrow{
+    -fx-background-color: black;
+}
+
+.vBox{
+    -fx-background-color: transparent;
+}
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+}
+
+.combo-box .list-cell:filled:selected{
+    -fx-background-color: transparent;
+    -fx-text-fill: yellowgreen;
+    -fx-font-size: 12;
+}
+
+.check-box{
+    -fx-background-color: transparent;
+    -fx-text-fill: #bfa8a8;
+    -fx-font-size: 12;
+}
+
+.check-box .box{
+    -fx-background-color: cornsilk;
+}
+
+.date-picker{
+    -fx-background-color: transparent;
+    -fx-font-size: 12;
+}
+
+.date-picker .arrow-button{
+    -fx-background-color: rgba(34,34,34,0.1);
+}
+
+.date-picker .arrow-button .arrow{
+    -fx-background-color: yellowgreen;
+}
+
+.split-pane{
+    -fx-background-color: transparent;
+}
+
+.split-pane .split-pane-divider{
+    -fx-background-color: black;
+}
+.split-pane .split-pane-divider .horizontal-grabber{
+    -fx-background-color: transparent;
+}

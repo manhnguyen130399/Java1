@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+.button{
+    -fx-background-color: rgba(0,0,255,0.05);
+    -fx-text-fill: black;
+}
+
+.button:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.text-field{
+    -fx-background-color: transparent;
+}

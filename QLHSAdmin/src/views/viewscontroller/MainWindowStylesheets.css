@@ -1,0 +1,34 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.border-pane-root{
+    -fx-background-color: white;
+}
+
+.button{
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+    -fx-opacity: 0.25;
+}
+
+.button:hover{
+    -fx-background-color: #2196F380;
+    -fx-opacity: 1;
+}
+
+.button-resize:hover{
+    -fx-background-color: #2196F380;
+    -fx-opacity: 1;
+    -fx-cursor: se-resize;
+}
+
+.button-title{
+    -fx-background-color: rgba(34, 34, 34, 1);
+    -fx-opacity: 1;
+}
+
+.anchor-pane-title{
+    -fx-background-color: rgba(34, 34, 34, 1);
+    -fx-opacity: 1;
+}

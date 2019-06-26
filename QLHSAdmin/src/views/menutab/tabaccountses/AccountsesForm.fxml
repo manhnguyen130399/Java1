@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpaneRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@AccountsesStyleSheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabaccountses.AccountsesController">
+   <left>
+      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" spacing="1.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <ToggleButton fx:id="togglebuttonAccountsHome" alignment="CENTER_RIGHT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" selected="true" text="Accounts Home" textFill="#bb3333">
+                     <graphic>
+                        <MaterialDesignIconView fill="#bb3333" glyphName="HOME" size="30" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="togglebuttonAccountsHomeLine" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="2.0" selected="true" styleClass="toggle-button-line-selected" />
+               </children>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <ToggleButton fx:id="togglebuttonCurrentAccount" alignment="CENTER_RIGHT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" text="Tài khoản hiện tại" textFill="#bb3333">
+                     <graphic>
+                        <MaterialDesignIconView fill="#bb3333" glyphName="ACCOUNT_BOX" size="30" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="togglebuttonCurrentAccountLine" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="2.0" styleClass="toggle-button-line-selected" />
+               </children>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <ToggleButton fx:id="togglebuttonAccountsList" alignment="CENTER_RIGHT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" text="Danh sách tài khoản" textFill="#bb3333">
+                     <graphic>
+                        <MaterialDesignIconView fill="#bb3333" glyphName="ACCOUNT_NETWORK" size="30" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="togglebuttonAccountsListLine" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="2.0" styleClass="toggle-button-line-selected" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="borderpaneAccountsHome">
+               <center>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" pannable="true" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="YOUR INFORMATION" textFill="#bfa8a8">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Label>
+                              <MaterialDesignIconView fill="#5300ff" glyphName="EMOTICON_COOL" size="300" />
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Username" />
+                                    <TextField fx:id="textfieldAHUsername" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="403.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Displayname" />
+                                    <TextField fx:id="textfieldAHDisplayname" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="443.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Password" />
+                                    <PasswordField editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" text="\@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="443.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Type" />
+                                    <TextField fx:id="textfieldAHType" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="borderpaneCurrentAccount" layoutX="10.0" layoutY="10.0" visible="false">
+               <center>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" pannable="true" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Your Information" textFill="#bfa8a8">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Username" />
+                                    <TextField fx:id="textfieldCAUsername" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="403.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Displayname" />
+                                    <TextField fx:id="textfieldCADisplayname" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="443.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Password" />
+                                    <PasswordField editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" text="\@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord@Passqord" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="443.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Type" />
+                                    <TextField fx:id="textfieldCAType" editable="false" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="340.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="10.0" layoutY="10.0" text="Change information" textFill="#bfa8a8">
+                                 <font>
+                                    <Font size="50.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Displayname" />
+                                    <JFXTextField fx:id="textfieldCADisplaynameChange" labelFloat="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="290.0" promptText="Displayname" unFocusColor="#bfa8a8" HBox.hgrow="SOMETIMES" />
+                                    <JFXButton fx:id="buttonCASaveDisplayname" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="40.0">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#bb3333" glyphName="CONTENT_SAVE" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Password" />
+                                    <StackPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="290.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <JFXTextField fx:id="textfieldCAPasswordChange" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="290.0" promptText="Password" unFocusColor="#bfa8a8" StackPane.alignment="CENTER" />
+                                          <JFXPasswordField fx:id="passwordfieldCAPasswordChange" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="290.0" promptText="Password" unFocusColor="#bfa8a8" StackPane.alignment="CENTER" />
+                                       </children>
+                                    </StackPane>
+                                    <ToggleButton fx:id="togglebuttonCAShowPassword" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" styleClass="toggle-button-showpassword">
+                                       <graphic>
+                                          <MaterialDesignIconView fx:id="mdivCAShowpassword" fill="#bb3333" glyphName="EYE_OFF" size="30" />
+                                       </graphic>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" text="Re-Enter Password" />
+                                    <StackPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="290.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <JFXTextField fx:id="textfieldCARePassword" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="290.0" promptText="Password" unFocusColor="#bfa8a8" StackPane.alignment="CENTER" />
+                                          <JFXPasswordField fx:id="passwordfieldCARePassword" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="290.0" promptText="Password" unFocusColor="#bfa8a8" StackPane.alignment="CENTER" />
+                                       </children>
+                                    </StackPane>
+                                    <JFXButton fx:id="buttonCASavePassword" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="40.0">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#bb3333" glyphName="CONTENT_SAVE" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="borderpaneAccountsList" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <center>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ScrollPane fx:id="scrollpaneAccountsTable" fitToHeight="true" fitToWidth="true" pannable="true">
+                           <content>
+                              <BorderPane fx:id="borderpaneAccountsTable" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </ScrollPane>
+                        <BorderPane fx:id="borderpaneAccountsListMenu" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" styleClass="border-pane-menu" StackPane.alignment="CENTER_RIGHT">
+                           <center>
+                              <StackPane BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ScrollPane fx:id="scrollpaneAccountListMenu" fitToWidth="true">
+                                       <content>
+                                          <JFXMasonryPane>
+                                             <children>
+                                                <ToggleButton fx:id="togglebuttonAdd" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Thêm" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#1aff00" glyphName="ACCOUNT_PLUS" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonEdit" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Sửa" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#0011ff" glyphName="ACCOUNT_CHECK" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonDelete" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Xóa" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_REMOVE" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonSearch" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Tìm kiếm" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ff00c5" glyphName="ACCOUNT_SEARCH" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonResetPassword" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Reset password" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#00d4ff" glyphName="ACCOUNT_CONVERT" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonRefresh" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Refresh Data" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ea00ff" glyphName="REFRESH" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="togglebuttonUnselectAll" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="UnSelect All" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#ffe500" glyphName="SELECT_ALL" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                             </children>
+                                          </JFXMasonryPane>
+                                       </content>
+                                    </ScrollPane>
+                                    <BorderPane fx:id="borderpaneAddAccount" visible="false">
+                                       <center>
+                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonAddAccBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                                         <graphic>
+                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Thêm tài khoản">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Username">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textfieldAddAccUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter username here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="70.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Displayname">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textfieldAddAccDisplayname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter displayname here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Password">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <PasswordField fx:id="passwordfieldAddAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter password here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </PasswordField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="150.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Type">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="comboboxAddAccType" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose account type" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaGV">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="comboboxAddAccMaGV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaGV" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonAddAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Thêm">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="buttonAddAccReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane fx:id="borderpaneEditAccount" layoutX="10.0" layoutY="10.0" visible="false">
+                                       <center>
+                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonEditAccBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                                         <graphic>
+                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Sửa tài khoản">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Nhập username để sửa tài khoản tương ứng">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Username">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textfieldEditAccUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter username here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Displayname">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="textfieldEditAccDisplayname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter displayname here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Password">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <PasswordField fx:id="passwordfieldEditAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter password here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </PasswordField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Type">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="comboboxEditAccType" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose account type" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaGV">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="comboboxEditAccMaGV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaGV" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonEditAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Sửa">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="buttonEditAccReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane fx:id="borderpaneDeleteAccount" layoutX="10.0" layoutY="10.0" visible="false">
+                                       <center>
+                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonDeleteAccBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                                         <graphic>
+                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Xóa tài khoản">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Bạn sẽ xóa các tài khoản được chọn trong bảng">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonDeleteAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Xóa">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="buttonDeleteAccReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane fx:id="borderpaneFindAccount" layoutX="10.0" layoutY="10.0" visible="false">
+                                       <center>
+                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonFindAccBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                                         <graphic>
+                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Tìm kiếm tài khoản">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="chechboxFindAccUsername" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Username">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <TextField fx:id="textfieldFindAccUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter username here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="70.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="checkboxFindAccDisplayname" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Displayname">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <TextField fx:id="textfieldFindAccDisplayname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0" promptText="Enter displayname here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="150.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="checkboxFindAccType" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Type">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <ComboBox fx:id="comboboxFindAccType" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0" promptText="Choose account type" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="checkboxFindAccMaGV" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="MaGV">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <ComboBox fx:id="comboboxFindAccMaGV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0" promptText="Choose MaGV" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonFindAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Tìm">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="buttonFindAccReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane fx:id="borderpaneResetPassword" layoutX="10.0" layoutY="10.0" visible="false">
+                                       <center>
+                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonResetAccBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                                         <graphic>
+                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Reset password">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                                   <children>
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Bạn sẽ reset password các tài khoản được chọn trong bảng">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <JFXButton fx:id="buttonResetPassAcc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset password">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </StackPane>
+                           </center>
+                        </BorderPane>
+                        <ToggleButton fx:id="togglebuttonAccountListMenu" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" StackPane.alignment="CENTER_RIGHT">
+                           <graphic>
+                              <MaterialDesignIconView fill="#bb3333" glyphName="MENU_LEFT" size="30" />
+                           </graphic>
+                        </ToggleButton>
+                     </children>
+                  </StackPane>
+               </center>
+               <top>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Danh sách tài khoản">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

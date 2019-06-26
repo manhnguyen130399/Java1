@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpaneRoot" stylesheets="@KQsStyleSheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabkqs.KQsController">
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scrollpaneKQTable" fitToHeight="true" fitToWidth="true">
+               <content>
+                  <BorderPane fx:id="borderpaneKQTable" />
+               </content>
+            </ScrollPane>
+            <StackPane fx:id="stackpaneMenu" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" visible="false">
+               <children>
+                  <ScrollPane fx:id="scrollpaneListMenu" fitToWidth="true" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" StackPane.alignment="CENTER_RIGHT">
+                     <content>
+                        <JFXMasonryPane>
+                           <children>
+                              <ToggleButton fx:id="togglebuttonEdit" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Sửa" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#0011ff" glyphName="ACCOUNT_CHECK" size="100" />
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="togglebuttonSearch" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Tìm kiếm" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#ff00c5" glyphName="ACCOUNT_SEARCH" size="100" />
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="togglebuttonRefresh" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Refresh Data" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#ea00ff" glyphName="REFRESH" size="100" />
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="togglebuttonUnselectAll" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="UnSelect All" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#ffe500" glyphName="SELECT_ALL" size="100" />
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </JFXMasonryPane>
+                     </content>
+                  </ScrollPane>
+                  <BorderPane fx:id="borderpaneEdit" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" visible="false" StackPane.alignment="CENTER_RIGHT">
+                     <center>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                 <children>
+                                    <JFXButton fx:id="buttonEditBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Sửa kết quả">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaHS">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldEditMaHS" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="440.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaLoaiHL">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldEditMaLoaiHL" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaLoaiHK">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboboxEditMaLoaiHK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaLoaiHK" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Nam">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldEditNam" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="HocKi">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldEditHocKi" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="440.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="DTB">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldEditDTB" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="buttonEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Sửa">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="buttonEditReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
+                                 <children>
+                                    <TextArea editable="false" text="Hướng dẫn:Nhập thông tin MaLoaiHK cần sửa.&#10;" wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="borderpaneSearch" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" visible="false" StackPane.alignment="CENTER_RIGHT">
+                     <top>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                 <children>
+                                    <JFXButton fx:id="buttonSearchBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                       </graphic>
+                                    </JFXButton>
+                                    <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Tìm kết quả">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchMaHS" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="MaHS" />
+                                    <TextField fx:id="textfieldSearchMaHS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="440.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchMaLoaiHL" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="MaLoaiHL" />
+                                    <TextField fx:id="textfieldSearchMaLoaiHL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchMaLoaiHK" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="MaLoaiHK" />
+                                    <TextField fx:id="textfieldSearchMaLoaiHK" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchNam" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Nam" />
+                                    <TextField fx:id="textfieldSearchNam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchHocKi" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="HocKi" />
+                                    <TextField fx:id="textfieldSearchHocKi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="440.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchDTBBiggerThan" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="DTB &gt;=" />
+                                    <TextField fx:id="textfieldSearchDTBBiggerThan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="270.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <CheckBox fx:id="checkboxSearchDTBSmallerThan" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="DTB &lt;=" />
+                                    <TextField fx:id="textfieldSearchDTBSmallerThan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter data here">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="buttonSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Tìm">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="buttonSearchReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
+                                 <children>
+                                    <TextArea editable="false" text="Hướng dẫn: Nhập thông tincần tìm vào ô tương ứng. Nhấn nút sửa để sửa. Chọn ô rồi nhấn Delete để xóa dữ liệu trong ô.&#10;" wrapText="true">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+               </children>
+            </StackPane>
+            <ToggleButton fx:id="togglebuttonListMenu" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" StackPane.alignment="CENTER_RIGHT">
+               <graphic>
+                  <MaterialDesignIconView fill="#bb3333" glyphName="MENU_LEFT" size="30" />
+               </graphic>
+            </ToggleButton>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

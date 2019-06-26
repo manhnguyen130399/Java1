@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+}
+
+.combo-box .list-cell:filled:selected{
+    -fx-background-color: transparent;
+    -fx-text-fill: yellowgreen;
+    -fx-font-size: 12;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpaneRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@LoginFormStylesheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.loginform.LoginFormController">
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" spacing="40.0">
+               <children>
+                  <Label text="Login">
+                     <font>
+                        <Font size="150.0" />
+                     </font>
+                  </Label>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
+                     <children>
+                        <JFXTextField fx:id="jfxtextfieldUsername" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" promptText="Username" StackPane.alignment="CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0">
+                     <children>
+                        <JFXTextField fx:id="jfxtextfieldPassword" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" promptText="Password" StackPane.alignment="CENTER" />
+                        <JFXPasswordField fx:id="jfxpasswordfieldPassword" focusColor="#0040ff" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" promptText="Password" StackPane.alignment="CENTER" />
+                        <JFXButton fx:id="buttonShowPassword" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" ripplerFill="#ffffff00" styleClass="button-show-password" StackPane.alignment="CENTER_RIGHT">
+                           <graphic>
+                              <MaterialDesignIconView fx:id="mdivShowPassword" glyphName="EYE_OFF" size="30" />
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Show password" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="510.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="buttonReset" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" styleClass="button-login" text="Reset">
+                           <tooltip>
+                              <Tooltip text="Reset" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="buttonLogin" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="420.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" styleClass="button-login" text="Login">
+                           <tooltip>
+                              <Tooltip text="Login" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

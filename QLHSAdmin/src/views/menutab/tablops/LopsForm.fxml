@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpaneRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@LopsStyleSheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tablops.LopsController">
+   <left>
+      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" spacing="1.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="15.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <ToggleButton fx:id="togglebuttonList" alignment="CENTER_RIGHT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" selected="true" text="Danh sách lớp" textFill="#bb3333">
+                     <graphic>
+                        <MaterialDesignIconView fill="#bb3333" glyphName="ACCOUNT_NETWORK" size="30" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="togglebuttonListLine" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="2.0" selected="true" styleClass="toggle-button-line-selected" />
+               </children>
+            </HBox>
+            <HBox layoutX="5.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <ToggleButton fx:id="togglebuttonCNGD" alignment="CENTER_RIGHT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="298.0" text="Phân công giáo viên cho lớp" textFill="#bb3333">
+                     <graphic>
+                        <MaterialDesignIconView fill="#bb3333" glyphName="ACCOUNT_NETWORK" size="30" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="togglebuttonCNGDLine" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="2.0" styleClass="toggle-button-line-selected" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane fx:id="splitpaneContent" dividerPositions="1.0">
+               <items>
+                  <ScrollPane fx:id="scrollpaneContentTable" fitToHeight="true" fitToWidth="true" pannable="true">
+                     <content>
+                        <BorderPane fx:id="borderpaneContentTable" prefHeight="200.0" prefWidth="200.0">
+                           <top>
+                              <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Danh sách lớp">
+                                             <font>
+                                                <Font size="40.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="scrollpaneCNGD" fitToHeight="true" fitToWidth="true" pannable="true">
+                     <content>
+                        <BorderPane>
+                           <top>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Phân công chủ nhiệm và giảng dạy">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </top>
+                           <center>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <Label text="Thông tin lớp">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                       <children>
+                                          <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Mã lớp" />
+                                          <ComboBox fx:id="comboboxCNGDMaLop" prefWidth="380.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" spacing="10.0">
+                                       <children>
+                                          <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" text="Tên lớp" />
+                                          <TextField fx:id="textfieldCNGDMaLop" editable="false" prefWidth="380.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Phân công chủ hiệm">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="vboxCN" />
+                                    <AnchorPane>
+                                       <children>
+                                          <JFXButton fx:id="buttonCNPlush" contentDisplay="CENTER" graphicTextGap="0.0" styleClass="button-content-plush" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox layoutX="10.0" layoutY="90.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Phân công giảng dạy">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="vboxGD" />
+                                    <AnchorPane layoutX="10.0" layoutY="120.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonGDPlush" contentDisplay="CENTER" graphicTextGap="0.0" styleClass="button-content-plush" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </content>
+                  </ScrollPane>
+               </items>
+            </SplitPane>
+            <BorderPane fx:id="borderpaneContentListMenu" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" styleClass="border-pane-menu" visible="false" StackPane.alignment="CENTER_RIGHT">
+               <center>
+                  <StackPane BorderPane.alignment="CENTER">
+                     <children>
+                        <ScrollPane fx:id="scrollpaneListMenu" fitToWidth="true">
+                           <content>
+                              <JFXMasonryPane>
+                                 <children>
+                                    <ToggleButton fx:id="togglebuttonAdd" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Thêm" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#1aff00" glyphName="ACCOUNT_PLUS" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="togglebuttonEdit" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Sửa" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#0011ff" glyphName="ACCOUNT_CHECK" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="togglebuttonDelete" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Xóa" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="RED" glyphName="ACCOUNT_REMOVE" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="togglebuttonSearch" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Tìm kiếm" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#ff00c5" glyphName="ACCOUNT_SEARCH" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="togglebuttonRefresh" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="Refresh Data" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#ea00ff" glyphName="REFRESH" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="togglebuttonUnselectAll" contentDisplay="TOP" graphicTextGap="0.0" layoutX="310.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" styleClass="toggle-button-menu" text="UnSelect All" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#ffe500" glyphName="SELECT_ALL" size="100" />
+                                       </graphic>
+                                    </ToggleButton>
+                                 </children>
+                              </JFXMasonryPane>
+                           </content>
+                        </ScrollPane>
+                        <BorderPane fx:id="borderpaneAdd" visible="false">
+                           <center>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonAddBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Thêm lớp">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldAddMaLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter MaLOP here">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="70.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="TenLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldAddTenLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenLOP here">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonAdd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Thêm">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="buttonAddReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
+                                       <children>
+                                          <TextArea editable="false" text="Hướng dẫn: Nhập thông tin vào các ô tương ứng. Với các ô nhập văn bản, nhấn Delete để xóa toàn bộ nội dung của ô. Với ô nhập liệu khác thì nhấn Delete sẽ đưa chúng về giá trị mặc định.&#10;Nếu thêm thành công sẽ nhận được 1 dòng mới trong bảng. Thêm thất bại thì ko có hiện tượng gì sảy ra." wrapText="true">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="borderpaneEdit" layoutX="10.0" layoutY="10.0" visible="false">
+                           <center>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonEditBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Sửa lớp">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboboxEditMaLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaLOP" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="TenLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="textfieldEditTenLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenLOP here">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Sửa">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="buttonEditReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
+                                       <children>
+                                          <TextArea editable="false" text="Hướng dẫn: Nhập thông tin MaLOP để xác định lớp cần sửa .Nhập thông tin vào các ô tương ứng. Với các ô nhập văn bản, nhấn Delete để xóa toàn bộ nội dung của ô. Với ô nhập liệu khác thì nhấn Delete sẽ đưa chúng về giá trị mặc định.&#10;Nếu sửa thành công sẽ nhận được 1 dòng mới trong bảng. Sửa thất bại thì ko có hiện tượng gì sảy ra." wrapText="true">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="borderpaneDelete" layoutX="10.0" layoutY="10.0" visible="false">
+                           <center>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonDeleteBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Xóa lớp">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Bạn sẽ xóa các lớp được chọn trong bảng">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonDelete" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Xóa">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="buttonDeleteReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane fx:id="borderpaneFind" layoutX="10.0" layoutY="10.0" visible="false">
+                           <right>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonFindBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Tìm kiếm lớp">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <CheckBox fx:id="checkboxFindMaLOP" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="MaLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <TextField fx:id="textfieldFindMaLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter MaLOP here">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <CheckBox fx:id="checkboxFindTenLOP" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="TenLOP">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <TextField fx:id="textfieldFindTenLOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenLOP here">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                       <children>
+                                          <JFXButton fx:id="buttonFind" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Tìm kiếm">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="buttonFindReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
+                                       <children>
+                                          <TextArea editable="false" text="Hướng dẫn: Nhập thông tin vào các ô tương ứng. Với các ô nhập văn bản, nhấn Delete để xóa toàn bộ nội dung của ô. Với ô nhập liệu khác thì nhấn Delete sẽ đưa chúng về giá trị mặc định." wrapText="true">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+            <ToggleButton fx:id="togglebuttonListMenu" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" StackPane.alignment="CENTER_RIGHT">
+               <graphic>
+                  <MaterialDesignIconView fill="#bb3333" glyphName="MENU_LEFT" size="30" />
+               </graphic>
+            </ToggleButton>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

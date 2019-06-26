@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox styleClass="vBox" stylesheets="@TKContentStylesheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabthongke.TKContentController">
+   <children>
+      <Label alignment="CENTER" text="THỐNG KÊ " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Tổ chức dạy đủ môn cho các khối lớp tỉ lệ:" textFill="WHITE" />
+            <Label layoutX="10.0" layoutY="25.0" text="100" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="\%" textFill="WHITE" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="55.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Công tác số lượng:" textFill="WHITE" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="105.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh theo học:" textFill="WHITE" />
+            <Label fx:id="labelTongHocSinh" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="155.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh nữ:" textFill="WHITE" />
+            <Label fx:id="labelTongHsNu" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="205.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh nữ dân tộc (khác dân tộc Kinh):" textFill="WHITE" />
+            <Label fx:id="labelTongHsNuDanToc" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="205.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh nam:" textFill="WHITE" />
+            <Label fx:id="labelTongHsNam" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="255.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh nam dân tộc (khác dân tộc Kinh):" textFill="WHITE" />
+            <Label fx:id="labelTongHsNamDanToc" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="155.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng học sinh theo học thuộc một tôn giáo:" textFill="WHITE" />
+            <Label fx:id="labelTongHsTheoTonGiao" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="học sinh" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="405.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Số lượng phụ huynh:" textFill="WHITE" />
+            <Label fx:id="labelTongSoPhuHuynh" layoutX="10.0" layoutY="25.0" textFill="WHITE" />
+            <Label layoutX="300.0" layoutY="25.0" text="người" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="105.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Biểu đồ:" textFill="WHITE" />
+         </children>
+      </HBox>
+      <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="2515.0" prefWidth="1204.0" vgap="10.0">
+         <children>
+            <TitledPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" text="Biểu đồ tỉ lệ nam nữ" textAlignment="CENTER">
+               <content>
+                  <PieChart fx:id="piechartTiLeNamNu" styleClass="piechart" />
+               </content>
+            </TitledPane>
+            <TitledPane alignment="CENTER" layoutX="617.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" text="Biểu đồ tỉ lệ học sinh các khối lớp" textAlignment="CENTER">
+               <content>
+                  <PieChart fx:id="piechartTiLeHsCacKhoiLop" styleClass="piechart" />
+               </content>
+            </TitledPane>
+            <TitledPane alignment="CENTER" layoutX="362.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" text="Biểu đồ tỉ lệ tôn giáo" textAlignment="CENTER">
+               <content>
+                  <PieChart fx:id="piechartTiLeTonGiao" styleClass="piechart" />
+               </content>
+            </TitledPane>
+            <TitledPane alignment="CENTER" layoutX="617.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" text="Biểu đồ tỉ lệ dân tộc" textAlignment="CENTER">
+               <content>
+                  <PieChart fx:id="piechartTiLeDanToc" styleClass="piechart" />
+               </content>
+            </TitledPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </FlowPane>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="505.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" spacing="10.0">
+         <children>
+            <Label text="Chất lượng học sinh:" textFill="WHITE" />
+         </children>
+      </HBox>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <TitledPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" text="Biểu đồ tỉ lệ học sinh giỏi, khá, trung bình, yếu" textAlignment="CENTER">
+               <content>
+                  <PieChart fx:id="piechartTiLeXepLoaiHs" styleClass="piechart" />
+               </content>
+            </TitledPane>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

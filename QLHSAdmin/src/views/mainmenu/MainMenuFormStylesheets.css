@@ -1,0 +1,71 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.border-pane{
+    -fx-background-color: rgba(34,34,34,1);
+}
+
+.menu-button .arrow-button .arrow{
+    -fx-background-color: transparent;
+}
+
+.menu-button{
+    -fx-background-color: transparent;
+}
+
+.jfx-tab-pane .depth-container .tab-header-area .tab-header-background{
+    -fx-background-color: rgba(34,34,34,1);
+}
+
+.jfx-tab-pane .depth-container .tab-header-area .headers-region .tab-selected-line{
+    -fx-background-color: greenyellow;
+}
+
+.jfx-tab-pane .depth-container .tab-header-area .headers-region .tab .jfx-rippler{
+    -jfx-rippler-fill: greenyellow;
+}
+
+.jfx-tab-pane .depth-container .tab-header-area .headers-region .tab .jfx-rippler .tab-container .tab-label{
+    -fx-text-fill: white;
+}
+
+.toggle-button{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.toggle-button:hover{
+    -fx-background-color: #00000050;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected{
+    -fx-background-color: #40404050;
+    -fx-text-fill: black;
+}
+
+.toggle-button:selected:hover{
+    -fx-background-color: #40404080;
+    -fx-text-fill: gray;
+}
+
+.scroll-pane .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .track{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .thumb{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .decrement-button .decrement-arrow{
+    -fx-background-color: black;
+}
+
+.scroll-pane .scroll-bar .increment-button .increment-arrow{
+    -fx-background-color: black;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="tableView" editable="true" stylesheets="@HanhKiemsTableFormStylesheets.css" tableMenuButtonVisible="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabhanhkiems.HanhKiemsTableFormController">
+    <columns>
+        <TableColumn fx:id="tableColumn_MAHK" prefWidth="75.0" text="Mã hạnh kiểm" />
+        <TableColumn fx:id="tableColumn_TENHK" prefWidth="75.0" text="Tên hạnh kiểm" />
+    </columns>
+   <columnResizePolicy>
+      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+   </columnResizePolicy>
+</TableView>

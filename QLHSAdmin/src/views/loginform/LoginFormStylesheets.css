@@ -1,0 +1,36 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-opacity: 1;
+}
+
+.button:hover{
+    -fx-background-color: rgba(34,34,255,0.5);
+    -fx-opacity: 1;
+}
+
+.button:focused{
+    -fx-border-color: red;
+}
+
+.button-login{
+    -fx-background-color: rgba(0,0,255,1);
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.button-show-password{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-opacity: 1;
+}
+
+.button-show-password:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-opacity: 1;
+}

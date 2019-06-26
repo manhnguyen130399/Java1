@@ -1,0 +1,81 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color:transparent;
+}
+
+.tab-pane {
+    /*        -fx-tab-min-width:50px;
+            -fx-tab-max-width:50px;*/
+    -fx-tab-min-height:25px;
+    -fx-tab-max-height:25px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 0 0 0 0; 
+}
+
+.tab {
+    /*    -fx-font-size: 20;*/
+    -fx-background-color: transparent;
+}
+
+.tab:selected {
+    -fx-background-color: black;
+    -fx-border-color: black;
+}
+
+.tab-label {
+    /*    -fx-rotate: 90;*/
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: white;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: black
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:top:selected .tab-container .tab-close-button{
+    -fx-min-height:25px;
+    -fx-max-height:25px;
+
+    -fx-min-width:25px;
+    -fx-max-width:25px;
+
+    -fx-pref-width:25px;
+    -fx-pref-height:25px;
+}
+
+.scroll-pane .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .track-background{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb{
+    -fx-background-color: black;
+}
+
+.button:hover{
+    -fx-opacity: 0.5;
+}

@@ -1,0 +1,47 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.vBox{
+    -fx-background-color: rgba(34,34,34,1);
+    -fx-text-fill: white;
+}
+
+.flow-pane{
+    -fx-background-color: rgba(34,34,34,1);
+}
+
+.titled-pane{
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+    -fx-border-radius: 5;
+    -fx-border-style: solid line-join round;
+    -fx-border-width: 2;
+    -fx-border-color: #9d9d8d;
+}
+
+.titled-pane .title{
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+
+.titled-pane .title:focused{
+    -fx-background-color: rgba(255,255,255,0.1);
+}
+
+.titled-pane .title .text{
+    -fx-fill: rgba(255,255,255,1);
+}
+
+.titled-pane .content{
+    -fx-background-color: rgba(255,255,255,0);
+    -fx-border-color: rgba(255,255,255,0);
+}
+
+.titled-pane:expanded .title .arrow-button .arrow{
+    -fx-background-color: rgba(255,255,255,0);
+}
+
+.piechart{
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
