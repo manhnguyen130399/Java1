@@ -24,10 +24,10 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ///Test main window///
-        Parent root = FXMLLoader.load(getClass().getResource("/views/viewscontroller/MainWindow.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("/views/viewscontroller/MainWindow.fxml"));
 
         ///Test login form///
-//        Parent root = FXMLLoader.load(getClass().getResource("/views/loginform/LoginForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/menutab/tabgiangdays/GiangDaysTableForm.fxml"));
 
         ///Test Loading screen///
 //        FXMLLoader fxmll = new FXMLLoader(getClass().getResource("/views/loadingscreen/LoadingScreen.fxml"));

@@ -73,6 +73,11 @@
                                                       <MaterialDesignIconView fill="RED" glyphName="CODE_EQUAL" size="100" />
                                                    </graphic>
                                                 </ToggleButton>
+                                                <ToggleButton fx:id="toggleButtonChuNhiem" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Chủ nhiệm" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#282826" glyphName="WHITE_BALANCE_SUNNY" size="100" />
+                                                   </graphic>
+                                                </ToggleButton>
                                                 <ToggleButton fx:id="togglebuttonKTs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Quản lí điểm" textAlignment="CENTER" wrapText="true">
                                                    <graphic>
                                                       <MaterialDesignIconView fill="#ffdf00" glyphName="TOR" size="100" />

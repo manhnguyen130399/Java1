@@ -24,6 +24,7 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.BorderPane;
 import models.Accounts;
 import views.menutab.tabaccountses.AccountsesController;
+import views.menutab.tabchunhiems.ChuNhiemsController;
 import views.menutab.tabcos.COsController;
 import views.menutab.tabgiaoviens.GiaoViensController;
 import views.menutab.tabhanhkiems.HanhKiemsController;
@@ -83,7 +84,8 @@ public class MainMenuFormController implements Initializable {
     private ToggleButton togglebuttonBack;
     @FXML
     private ToggleButton togglebuttonThongKe;
-
+    @FXML
+    private ToggleButton toggleButtonChuNhiem;
     public static enum STATUS {
         READY, RUNNING, BACK, NONE
     }
@@ -119,6 +121,7 @@ public class MainMenuFormController implements Initializable {
     private LopsController lopsController;
     private MonHocsController monhocsController;
     private ThongKeController thongKeController;
+    private ChuNhiemsController chuNhiemsController;
 
     private void SetOpenAllTabAvaiable(boolean isOpen) {
         this.togglebuttonAccountses.setSelected(isOpen);
@@ -133,6 +136,7 @@ public class MainMenuFormController implements Initializable {
         this.togglebuttonLops.setSelected(isOpen);
         this.togglebuttonMonHocs.setSelected(isOpen);
         this.togglebuttonThongKe.setSelected(isOpen);
+        this.toggleButtonChuNhiem.setSelected(isOpen);
     }
 
     public ObjectProperty<STATUS> getStatusProperty() {
@@ -158,14 +162,24 @@ public class MainMenuFormController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+      
+        try{
+            FXMLLoader fxmll;
+            fxmll=new FXMLLoader(this.getClass().getResource("/views/menutab/tabchunhiems/ChuNhiemsForm.fxml"));
+            this.tabChuNhiems.setContent(fxmll.load());
+            this.chuNhiemsController=fxmll.getController();
+        }catch(IOException ex){
+            Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+   
         try {
             FXMLLoader fxmll;
             fxmll = new FXMLLoader(this.getClass().getResource("/views/menutab/tabcos/COsForm.fxml"));
             this.tabCOs.setContent(fxmll.load());
             this.cosController = fxmll.getController();
         } catch (IOException ex) {
-            Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
 
         try {
@@ -398,6 +412,19 @@ public class MainMenuFormController implements Initializable {
                 this.ktsController.getCurrentAccountProperty().set(this.currentAccountProperty.get());
             }
         });
+        //Tab chu nhiem
+        this.chuNhiemsController.getCurrentAccountProperty().addListener((observable) -> {
+            if (this.chuNhiemsController.getCurrentAccountProperty().get()
+                    .equalsAll(this.currentAccountProperty.get()) == false) {
+                this.currentAccountProperty.set(this.chuNhiemsController.getCurrentAccountProperty().get());
+            }
+        });
+       this.currentAccountProperty.addListener((observable) -> {
+           if(this.currentAccountProperty.get().equalsAll(this.chuNhiemsController.getCurrentAccountProperty().get())==false){
+               this.chuNhiemsController.getCurrentAccountProperty().set(this.currentAccountProperty.get());
+           }
+       });
+       
         
 
         ///Chức năng thêm, gỡ tab///
@@ -478,6 +505,7 @@ public class MainMenuFormController implements Initializable {
                 }
             }
         });
+       
         this.togglebuttonHocKi_NamHocs.selectedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 if (this.tabpaneContent.getTabs().contains(this.tabHocKi_NamHocs) == false) {
@@ -562,6 +590,20 @@ public class MainMenuFormController implements Initializable {
                 }
             }
         });
+        
+        this.toggleButtonChuNhiem.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                if (this.tabpaneContent.getTabs().contains(this.tabChuNhiems) == false) {
+                    this.tabpaneContent.getTabs().add(this.tabChuNhiems);
+                    this.tabpaneContent.selectionModelProperty().getValue().select(this.tabChuNhiems);
+                }
+            } else {
+                if (this.tabpaneContent.getTabs().contains(this.tabChuNhiems) == true) {
+                    this.tabpaneContent.getTabs().remove(this.tabChuNhiems);
+                }
+            }
+        });
+        
 
         ///Binding đóng tab, mở tắt button///
         this.tabAccountses.setOnCloseRequest((event) -> {
@@ -611,6 +653,11 @@ public class MainMenuFormController implements Initializable {
         this.tabThongKe.setOnCloseRequest((event) -> {
             this.togglebuttonThongKe.setSelected(false);
         });
+        
+        this.tabChuNhiems.setOnCloseRequest((event) -> {
+            this.toggleButtonChuNhiem.setSelected(false);
+        });
+      
 
         ///Chức năng OpenAll
         this.togglebuttonOpenAll.selectedProperty().addListener((observable, oldValue, newValue) -> {
