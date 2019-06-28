@@ -164,84 +164,6 @@
                                           </VBox>
                                        </center>
                                     </BorderPane>
-                                    <BorderPane fx:id="borderpaneEdit" layoutX="10.0" layoutY="10.0" visible="false">
-                                       <center>
-                                          <VBox spacing="10.0" BorderPane.alignment="CENTER">
-                                             <children>
-                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0">
-                                                   <children>
-                                                      <JFXButton fx:id="buttonEditBack" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0">
-                                                         <graphic>
-                                                            <MaterialDesignIconView fill="#bb3333" glyphName="CHEVRON_LEFT" size="30" />
-                                                         </graphic>
-                                                      </JFXButton>
-                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Sửa chủ nhiệm">
-                                                         <font>
-                                                            <Font size="20.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
-                                                   <children>
-                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaGV">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <ComboBox fx:id="comboBoxEditMaGV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaGV" />
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
-                                                   <children>
-                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="MaLop">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <ComboBox fx:id="comboBoxEditMaLop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaLop" />
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
-                                                   <children>
-                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Hoc Ki_Nam Hoc">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <ComboBox fx:id="comboBoxEditHK_NH" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose HocKi_NamHoc" />
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
-                                                   <children>
-                                                      <JFXButton fx:id="buttonEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Sửa">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </JFXButton>
-                                                      <JFXButton fx:id="buttonEditReset" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Reset">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </JFXButton>
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="160.0" prefWidth="490.0">
-                                                   <children>
-                                                      <TextArea editable="false" text="Hướng dẫn: Nhập thông tin MaGV để xác định giáo viên cần sửa .Nhập thông tin vào các ô tương ứng. Với các ô nhập văn bản, nhấn Delete để xóa toàn bộ nội dung của ô. Với ô nhập liệu khác thì nhấn Delete sẽ đưa chúng về giá trị mặc định.&#10;Nếu sửa thành công sẽ nhận được 1 dòng mới trong bảng. Sửa thất bại thì ko có hiện tượng gì sảy ra." wrapText="true">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </TextArea>
-                                                   </children>
-                                                </HBox>
-                                             </children>
-                                             <padding>
-                                                <Insets left="5.0" right="5.0" />
-                                             </padding>
-                                          </VBox>
-                                       </center>
-                                    </BorderPane>
                                     <BorderPane fx:id="borderpaneDelete" layoutX="10.0" layoutY="10.0" visible="false">
                                        <center>
                                           <VBox spacing="10.0" BorderPane.alignment="CENTER">
@@ -338,12 +260,26 @@
                                                 </HBox>
                                                 <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
                                                    <children>
-                                                      <CheckBox fx:id="checkboxFindHocKI_NamHoc" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="HocKi">
+                                                      <CheckBox fx:id="checkboxFindHocKI" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="HocKi">
                                                          <font>
                                                             <Font size="12.0" />
                                                          </font>
                                                       </CheckBox>
-                                                      <TextField fx:id="textfieldFindHocKi_NamHoc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenGV here">
+                                                      <TextField fx:id="textfieldFindHocKi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenGV here">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="checkboxFindNamHoc" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="NamHoc">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <TextField fx:id="textFieldFindNamHoc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Enter TenGV here">
                                                          <font>
                                                             <Font size="12.0" />
                                                          </font>

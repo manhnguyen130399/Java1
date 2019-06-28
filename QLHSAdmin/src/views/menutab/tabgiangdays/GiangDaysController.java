@@ -9,9 +9,11 @@ import views.menutab.tabchunhiems.*;
 import views.menutab.tabgiaoviens.*;
 import com.jfoenix.controls.JFXButton;
 import controllers.ChuNhiemController;
+import controllers.GiangDayController;
 import controllers.GiaoVienController;
 import controllers.HocKi_NamHocController;
 import controllers.LopController;
+import controllers.MonHocController;
 
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.io.IOException;
@@ -42,10 +44,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import models.Accounts;
 import models.ChuNhiem;
+import models.GiangDay;
 import models.GiaoVien;
 import models.HocKi_NamHoc;
 import models.Lop;
 import models.Model;
+import models.MonHoc;
 import views.mainmenu.MainMenuFormController;
 
 public class GiangDaysController implements Initializable {
@@ -53,8 +57,8 @@ public class GiangDaysController implements Initializable {
     private final ObjectProperty<Accounts> currentAccountProperty = new SimpleObjectProperty<>(null);
     private final ToggleGroup toggleGroupMenu = new ToggleGroup();
 
-    private TableView<ChuNhiem> tableviewChuNhiems;
-    private ChuNhiemsTableFormController tableviewChuNhiemsTableFormController;
+    private TableView<GiangDay> tableviewGiangDays;
+    private GiangDaysTableFormController tableGiangDayController;
 
     @FXML
     private BorderPane borderpaneRoot;
@@ -64,8 +68,6 @@ public class GiangDaysController implements Initializable {
     private ScrollPane scrollpaneListMenu;
     @FXML
     private ToggleButton togglebuttonAdd;
-    @FXML
-    private ToggleButton togglebuttonEdit;
     @FXML
     private ToggleButton togglebuttonDelete;
     @FXML
@@ -85,19 +87,11 @@ public class GiangDaysController implements Initializable {
     @FXML
     private ComboBox<HocKi_NamHoc> comboboxAddHK_NH;
     @FXML
+    private ComboBox<MonHoc> comboBox_AddMH;
+    @FXML
     private JFXButton buttonAdd;
     @FXML
     private JFXButton buttonAddReset;
-    @FXML
-    private BorderPane borderpaneEdit;
-    @FXML
-    private JFXButton buttonEditBack;
-    @FXML
-    private ComboBox<GiaoVien> comboBoxEditMaGV;
-    @FXML
-    private ComboBox<Lop> comboBoxEditMaLop;
-    @FXML
-    private ComboBox<HocKi_NamHoc> comboBoxEditHK_NH;
     @FXML
     private BorderPane borderpaneDelete;
     @FXML
@@ -115,7 +109,11 @@ public class GiangDaysController implements Initializable {
     @FXML
     private TextField textfieldFindMaLop;
     @FXML
-    private TextField textfieldFindHocKi_NamHoc;
+    private TextField textfieldFindHocKi;
+    @FXML
+    private TextField textfielddFindNamHoc;
+    @FXML
+    private TextField textfieldFindMaMH;
     @FXML
     private JFXButton buttonFind;
     @FXML
@@ -129,7 +127,11 @@ public class GiangDaysController implements Initializable {
     @FXML
     private CheckBox checkboxFindMaLop;
     @FXML
-    private CheckBox checkboxFindHocKI_NamHoc;
+    private CheckBox checkboxFindHocKI;
+    @FXML
+    private CheckBox checkboxFindNamHoc;
+    @FXML
+    private CheckBox checkboxFindMaMH;
     @FXML
     private BorderPane borderpaneContentList;
     @FXML
@@ -162,13 +164,13 @@ public class GiangDaysController implements Initializable {
 
     private void SetDataToList() {
         if (currentAccountProperty.get() != null) {
-            tableviewChuNhiemsTableFormController.setData(
-                    (ArrayList<ChuNhiem>) ((ArrayList<? extends Model>) ChuNhiemController.getInstance()
+            tableGiangDayController.setData(
+                    (ArrayList<GiangDay>) ((ArrayList<? extends Model>) GiangDayController.getInstance()
                             .GetList(currentAccountProperty.get())));
 
         } else {
-            tableviewChuNhiemsTableFormController.setData(
-                    (ArrayList<ChuNhiem>) ((ArrayList<? extends Model>) ChuNhiemController.getInstance()
+            tableGiangDayController.setData(
+                    (ArrayList<GiangDay>) ((ArrayList<? extends Model>) GiangDayController.getInstance()
                             .GetList()));
 
         }
@@ -178,18 +180,23 @@ public class GiangDaysController implements Initializable {
         this.comboboxAddMaGV.getSelectionModel().select(0);
         this.comboboxAddMaLop.getSelectionModel().select(0);
         this.comboboxAddHK_NH.getSelectionModel().select(0);
+        this.comboBox_AddMH.getSelectionModel().select(0);
        
     }
 
     private void ResetDataFind() {
         
         
-        this.textfieldFindHocKi_NamHoc.setText("");
+        this.textfieldFindHocKi.setText("");
+        this.textfielddFindNamHoc.setText("");
+        this.textfieldFindMaMH.setText("");
         this.textfieldFindMaGV.setText("");
         this.textfieldFindMaLop.setText("");
         this.checkboxFindMaGV.setSelected(false);
-        this.checkboxFindHocKI_NamHoc.setSelected(false);
+        this.checkboxFindHocKI.setSelected(false);
         this.checkboxFindMaLop.setSelected(false);
+        this.checkboxFindNamHoc.setSelected(false);
+        this.checkboxFindMaMH.setSelected(false);
         
     }
 
@@ -206,10 +213,10 @@ public class GiangDaysController implements Initializable {
         ///Khởi tạo bảng///
         try {
             FXMLLoader fxmll;
-            fxmll = new FXMLLoader(this.getClass().getResource("ChuNhiemsTableForm.fxml"));
-            this.tableviewChuNhiems = fxmll.load();
-            this.tableviewChuNhiemsTableFormController = fxmll.getController();
-            this.borderpaneContentTable.setCenter(this.tableviewChuNhiems);
+            fxmll = new FXMLLoader(this.getClass().getResource("GiangDaysTableForm.fxml"));
+            this.tableviewGiangDays = fxmll.load();
+            this.tableGiangDayController = fxmll.getController();
+            this.borderpaneContentTable.setCenter(this.tableviewGiangDays);
         } catch (IOException ex) {
             Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -220,6 +227,9 @@ public class GiangDaysController implements Initializable {
         this.comboboxAddMaLop.getItems().addAll((ArrayList<Lop>) ((ArrayList<? extends Model>) LopController.getInstance().GetList()));
         this.comboboxAddHK_NH.getItems().clear();
         this.comboboxAddHK_NH.getItems().addAll((ArrayList<HocKi_NamHoc>) ((ArrayList<? extends Model>) HocKi_NamHocController.getInstance().GetList()));
+        this.comboBox_AddMH.getItems().clear();
+        this.comboBox_AddMH.getItems().addAll((ArrayList<MonHoc>) ((ArrayList<? extends Model>) MonHocController.getInstance().GetList()));
+        
        
       
         
@@ -250,7 +260,7 @@ public class GiangDaysController implements Initializable {
         this.togglebuttonListMenu.selectedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 this.togglebuttonUnselectAll.setText("UnSelect These Rows("
-                        + this.tableviewChuNhiems.getSelectionModel().getSelectedItems().size() + ")");
+                        + this.tableviewGiangDays.getSelectionModel().getSelectedItems().size() + ")");
                 this.HideBorderpaneMenu(false);
                 ((MaterialDesignIconView) this.togglebuttonListMenu.getGraphic()).setGlyphName("MENU_RIGHT");
                 this.scrollpaneContentTable.setOpacity(0.25);
@@ -265,10 +275,7 @@ public class GiangDaysController implements Initializable {
         //Binding dữ liệu giữa toggle button trong menu list và hiển thị borderpane chức năng///
         this.borderpaneAdd.visibleProperty().bind(this.togglebuttonAdd.selectedProperty());
         this.borderpaneAdd.managedProperty().bind(this.togglebuttonAdd.selectedProperty());
-
-        this.borderpaneEdit.visibleProperty().bind(this.togglebuttonEdit.selectedProperty());
-        this.borderpaneEdit.managedProperty().bind(this.togglebuttonEdit.selectedProperty());
-
+        
         this.borderpaneDelete.visibleProperty().bind(this.togglebuttonDelete.selectedProperty());
         this.borderpaneDelete.managedProperty().bind(this.togglebuttonDelete.selectedProperty());
 
@@ -278,9 +285,7 @@ public class GiangDaysController implements Initializable {
         this.togglebuttonAdd.selectedProperty().addListener((observable, oldValue, newValue) -> {
             this.HideScrollpaneListMenu(newValue);
         });
-        this.togglebuttonEdit.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            this.HideScrollpaneListMenu(newValue);
-        });
+       
         this.togglebuttonDelete.selectedProperty().addListener((observable, oldValue, newValue) -> {
             this.HideScrollpaneListMenu(newValue);
         });
@@ -290,9 +295,6 @@ public class GiangDaysController implements Initializable {
 
         this.buttonAddBack.setOnAction((event) -> {
             this.togglebuttonAdd.setSelected(false);
-        });
-        this.buttonEditBack.setOnAction((event) -> {
-            this.togglebuttonEdit.setSelected(false);
         });
         this.buttonDeleteBack.setOnAction((event) -> {
             this.togglebuttonDelete.setSelected(false);
@@ -310,10 +312,12 @@ public class GiangDaysController implements Initializable {
             GiaoVien gv=this.comboboxAddMaGV.getValue();
             Lop lop=this.comboboxAddMaLop.getValue();
             HocKi_NamHoc hknh=this.comboboxAddHK_NH.getValue();
+            MonHoc mh=this.comboBox_AddMH.getValue();
             
 
-            ChuNhiem model = new ChuNhiem(
+            GiangDay model = new GiangDay(
                     gv.getMaGV(),
+                    mh.getMaMH(),
                     lop.getMaLop(),
                     hknh.getNam(),
                     hknh.getHocKi()
@@ -321,7 +325,7 @@ public class GiangDaysController implements Initializable {
                
                    
 
-            this.tableviewChuNhiemsTableFormController.AddItem(model);
+            this.tableGiangDayController.AddItem(model);
             this.ResetDataAdd();
         });
         this.buttonAddReset.setOnAction((event) -> {
@@ -330,16 +334,16 @@ public class GiangDaysController implements Initializable {
 
         ///Chức năng xóa giáo viên///
         this.buttonDelete.setOnAction((event) -> {
-            this.tableviewChuNhiemsTableFormController.DeleteChoiseItems();
+            this.tableGiangDayController.DeleteChoiseItems();
         });
         this.buttonDeleteReset.setOnAction((event) -> {
-            this.tableviewChuNhiemsTableFormController.ClearSelectedItems();
+            this.tableGiangDayController.ClearSelectedItems();
         });
 
 
         ///Chức năng tìm kiếm///
         this.buttonFind.setOnAction((event) -> {
-            ChuNhiem model = new ChuNhiem();
+            GiangDay model = new GiangDay();
 
             if (this.checkboxFindMaGV.isSelected()) {
                 model.setMaGV(this.textfieldFindMaGV.getText());
@@ -348,14 +352,20 @@ public class GiangDaysController implements Initializable {
             if (this.checkboxFindMaLop.isSelected()) {
                 model.setMaLop(this.textfieldFindMaLop.getText());
             }
-            if (this.checkboxFindHocKI_NamHoc.isSelected()) {
-                model.setHocKi(Integer.parseInt(this.textfieldFindHocKi_NamHoc.getText()));
+            if (this.checkboxFindHocKI.isSelected()) {
+                model.setHocKi(Integer.parseInt(this.textfieldFindHocKi.getText()));
+            }
+            if(this.checkboxFindNamHoc.isSelected()){
+            model.setNam(Integer.parseInt(this.textfielddFindNamHoc.getText()));
+            }
+            if(this.checkboxFindMaMH.isSelected()){
+                model.setMaMH(this.textfieldFindMaMH.getText());
             }
 
             model.ChangeToNull();
 
-            this.tableviewChuNhiemsTableFormController.ClearSelectedItems();
-            this.tableviewChuNhiemsTableFormController.SearchItems(model);
+            this.tableGiangDayController.ClearSelectedItems();
+            this.tableGiangDayController.SearchItems(model);
         });
         this.buttonFindReset.setOnAction((event) -> {
             this.ResetDataFind();
@@ -364,7 +374,7 @@ public class GiangDaysController implements Initializable {
         ///Chức năng refresh data///
         this.togglebuttonRefresh.selectedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
-                this.tableviewChuNhiemsTableFormController.Refresh();
+                this.tableGiangDayController.Refresh();
                 this.togglebuttonRefresh.setSelected(false);
             }
         });
@@ -372,9 +382,9 @@ public class GiangDaysController implements Initializable {
         ///Chức năng UnselectAll///
         this.togglebuttonUnselectAll.selectedProperty().addListener(((observable, oldValue, newValue) -> {
             if (newValue) {
-                this.tableviewChuNhiemsTableFormController.ClearSelectedItems();
+                this.tableGiangDayController.ClearSelectedItems();
                 this.togglebuttonUnselectAll.setText("UnSelect These Rows("
-                        + this.tableviewChuNhiems.getSelectionModel().getSelectedItems().size() + ")");
+                        + this.tableviewGiangDays.getSelectionModel().getSelectedItems().size() + ")");
                 this.togglebuttonUnselectAll.setSelected(false);
             }
         }));

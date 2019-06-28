@@ -66,7 +66,7 @@ public class ChuNhiemController extends ModelController {
                 + "HOCKY = " + cn_moi.getHocKi() + ""
                 + " WHERE "
                 + "MAGV = '" + cn_cu.getMaGV() + "' AND "
-                + "MALOP = '" + cn_cu.getMaLop() + "' AND"
+                + "MALOP = '" + cn_cu.getMaLop() + "' AND "
                 + "NAM = " + cn_cu.getNam() + " AND "
                 + "HOCKY = " + cn_cu.getHocKi();
     }

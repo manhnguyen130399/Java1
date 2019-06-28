@@ -53,7 +53,7 @@
                                                       <MaterialDesignIconView fill="#b92323" glyphName="BORDER_COLOR" size="100" />
                                                    </graphic>
                                                 </ToggleButton>
-                                                <ToggleButton fx:id="togglebuttonLops" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách lớp, phân công chủ nhiệm và phân công giảng dạy" textAlignment="CENTER" wrapText="true">
+                                                <ToggleButton fx:id="togglebuttonLops" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách lớp" textAlignment="CENTER" wrapText="true">
                                                    <graphic>
                                                       <MaterialDesignIconView fill="#ff009a" glyphName="CITY" size="100" />
                                                    </graphic>
@@ -65,7 +65,7 @@
                                                 </ToggleButton>
                                                 <ToggleButton fx:id="togglebuttonCOs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="160.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Danh sách và Lí lịch học sinh" textAlignment="CENTER" wrapText="true">
                                                    <graphic>
-                                                      <MaterialDesignIconView fill="BLUE" glyphName="CAT" size="100" />
+                                                      <MaterialDesignIconView fill="BLUE" glyphName="CAT" size="100" text="" />
                                                    </graphic>
                                                 </ToggleButton>
                                                 <ToggleButton fx:id="togglebuttonHocs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="610.0" layoutY="235.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Xếp lớp cho học sinh" textAlignment="CENTER" wrapText="true">
@@ -75,7 +75,12 @@
                                                 </ToggleButton>
                                                 <ToggleButton fx:id="toggleButtonChuNhiem" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Chủ nhiệm" textAlignment="CENTER" wrapText="true">
                                                    <graphic>
-                                                      <MaterialDesignIconView fill="#282826" glyphName="WHITE_BALANCE_SUNNY" size="100" />
+                                                      <MaterialDesignIconView fill="#282826" glyphName="CAT" size="100" text="" />
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="toggleButtonGiangDay" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Phân công giảng dạy" textAlignment="CENTER" wrapText="true">
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="#979797" glyphName="CALENDAR" size="100" />
                                                    </graphic>
                                                 </ToggleButton>
                                                 <ToggleButton fx:id="togglebuttonKTs" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" text="Quản lí điểm" textAlignment="CENTER" wrapText="true">

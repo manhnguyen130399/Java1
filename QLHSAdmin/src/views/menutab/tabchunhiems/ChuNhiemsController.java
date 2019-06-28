@@ -64,8 +64,6 @@ public class ChuNhiemsController implements Initializable {
     @FXML
     private ToggleButton togglebuttonAdd;
     @FXML
-    private ToggleButton togglebuttonEdit;
-    @FXML
     private ToggleButton togglebuttonDelete;
     @FXML
     private ToggleButton togglebuttonSearch;
@@ -88,16 +86,6 @@ public class ChuNhiemsController implements Initializable {
     @FXML
     private JFXButton buttonAddReset;
     @FXML
-    private BorderPane borderpaneEdit;
-    @FXML
-    private JFXButton buttonEditBack;
-    @FXML
-    private ComboBox<GiaoVien> comboBoxEditMaGV;
-    @FXML
-    private ComboBox<Lop> comboBoxEditMaLop;
-    @FXML
-    private ComboBox<HocKi_NamHoc> comboBoxEditHK_NH;
-    @FXML
     private BorderPane borderpaneDelete;
     @FXML
     private JFXButton buttonDeleteBack;
@@ -114,7 +102,9 @@ public class ChuNhiemsController implements Initializable {
     @FXML
     private TextField textfieldFindMaLop;
     @FXML
-    private TextField textfieldFindHocKi_NamHoc;
+    private TextField textfieldFindHocKi;
+    @FXML
+    private TextField textFieldFindNamHoc;
     @FXML
     private JFXButton buttonFind;
     @FXML
@@ -128,7 +118,9 @@ public class ChuNhiemsController implements Initializable {
     @FXML
     private CheckBox checkboxFindMaLop;
     @FXML
-    private CheckBox checkboxFindHocKI_NamHoc;
+    private CheckBox checkboxFindHocKI;
+    @FXML
+    private CheckBox checkboxFindNamHoc;
     @FXML
     private BorderPane borderpaneContentList;
     @FXML
@@ -183,12 +175,15 @@ public class ChuNhiemsController implements Initializable {
     private void ResetDataFind() {
         
         
-        this.textfieldFindHocKi_NamHoc.setText("");
+        this.textfieldFindHocKi.setText("");
         this.textfieldFindMaGV.setText("");
         this.textfieldFindMaLop.setText("");
+        this.textFieldFindNamHoc.setText("");
+        
         this.checkboxFindMaGV.setSelected(false);
-        this.checkboxFindHocKI_NamHoc.setSelected(false);
+        this.checkboxFindHocKI.setSelected(false);
         this.checkboxFindMaLop.setSelected(false);
+        this.checkboxFindNamHoc.setSelected(false);
         
     }
 
@@ -265,9 +260,6 @@ public class ChuNhiemsController implements Initializable {
         this.borderpaneAdd.visibleProperty().bind(this.togglebuttonAdd.selectedProperty());
         this.borderpaneAdd.managedProperty().bind(this.togglebuttonAdd.selectedProperty());
 
-        this.borderpaneEdit.visibleProperty().bind(this.togglebuttonEdit.selectedProperty());
-        this.borderpaneEdit.managedProperty().bind(this.togglebuttonEdit.selectedProperty());
-
         this.borderpaneDelete.visibleProperty().bind(this.togglebuttonDelete.selectedProperty());
         this.borderpaneDelete.managedProperty().bind(this.togglebuttonDelete.selectedProperty());
 
@@ -277,9 +269,7 @@ public class ChuNhiemsController implements Initializable {
         this.togglebuttonAdd.selectedProperty().addListener((observable, oldValue, newValue) -> {
             this.HideScrollpaneListMenu(newValue);
         });
-        this.togglebuttonEdit.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            this.HideScrollpaneListMenu(newValue);
-        });
+      
         this.togglebuttonDelete.selectedProperty().addListener((observable, oldValue, newValue) -> {
             this.HideScrollpaneListMenu(newValue);
         });
@@ -290,9 +280,7 @@ public class ChuNhiemsController implements Initializable {
         this.buttonAddBack.setOnAction((event) -> {
             this.togglebuttonAdd.setSelected(false);
         });
-        this.buttonEditBack.setOnAction((event) -> {
-            this.togglebuttonEdit.setSelected(false);
-        });
+      
         this.buttonDeleteBack.setOnAction((event) -> {
             this.togglebuttonDelete.setSelected(false);
         });
@@ -347,8 +335,11 @@ public class ChuNhiemsController implements Initializable {
             if (this.checkboxFindMaLop.isSelected()) {
                 model.setMaLop(this.textfieldFindMaLop.getText());
             }
-            if (this.checkboxFindHocKI_NamHoc.isSelected()) {
-                model.setHocKi(Integer.parseInt(this.textfieldFindHocKi_NamHoc.getText()));
+            if (this.checkboxFindHocKI.isSelected()) {
+                model.setHocKi(Integer.parseInt(this.textfieldFindHocKi.getText()));
+            }
+            if(this.checkboxFindNamHoc.isSelected()){
+                model.setNam(Integer.parseInt(this.textFieldFindNamHoc.getText()));
             }
 
             model.ChangeToNull();

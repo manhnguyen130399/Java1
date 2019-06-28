@@ -26,6 +26,7 @@ import models.Accounts;
 import views.menutab.tabaccountses.AccountsesController;
 import views.menutab.tabchunhiems.ChuNhiemsController;
 import views.menutab.tabcos.COsController;
+import views.menutab.tabgiangdays.GiangDaysController;
 import views.menutab.tabgiaoviens.GiaoViensController;
 import views.menutab.tabhanhkiems.HanhKiemsController;
 import views.menutab.tabhocki_namhocs.HocKi_NamHocsController;
@@ -86,6 +87,8 @@ public class MainMenuFormController implements Initializable {
     private ToggleButton togglebuttonThongKe;
     @FXML
     private ToggleButton toggleButtonChuNhiem;
+    @FXML
+    private ToggleButton toggleButtonGiangDay;
     public static enum STATUS {
         READY, RUNNING, BACK, NONE
     }
@@ -122,6 +125,7 @@ public class MainMenuFormController implements Initializable {
     private MonHocsController monhocsController;
     private ThongKeController thongKeController;
     private ChuNhiemsController chuNhiemsController;
+    private GiangDaysController giangDaysController;
 
     private void SetOpenAllTabAvaiable(boolean isOpen) {
         this.togglebuttonAccountses.setSelected(isOpen);
@@ -137,6 +141,7 @@ public class MainMenuFormController implements Initializable {
         this.togglebuttonMonHocs.setSelected(isOpen);
         this.togglebuttonThongKe.setSelected(isOpen);
         this.toggleButtonChuNhiem.setSelected(isOpen);
+        this.toggleButtonGiangDay.setSelected(isOpen);
     }
 
     public ObjectProperty<STATUS> getStatusProperty() {
@@ -172,6 +177,14 @@ public class MainMenuFormController implements Initializable {
             Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        try{
+            FXMLLoader fxmll;
+            fxmll=new FXMLLoader(this.getClass().getResource("/views/menutab/tabgiangdays/GiangDaysForm.fxml"));
+            this.tabGiangDays.setContent(fxmll.load());
+            this.giangDaysController=fxmll.getController();
+        }catch(IOException ex){
+            Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
+        }
    
         try {
             FXMLLoader fxmll;
@@ -424,6 +437,18 @@ public class MainMenuFormController implements Initializable {
                this.chuNhiemsController.getCurrentAccountProperty().set(this.currentAccountProperty.get());
            }
        });
+       //Tab giang day
+       this.giangDaysController.getCurrentAccountProperty().addListener((observable) -> {
+            if (this.giangDaysController.getCurrentAccountProperty().get()
+                    .equalsAll(this.currentAccountProperty.get()) == false) {
+                this.currentAccountProperty.set(this.giangDaysController.getCurrentAccountProperty().get());
+            }
+        });
+       this.currentAccountProperty.addListener((observable) -> {
+           if(this.currentAccountProperty.get().equalsAll(this.giangDaysController.getCurrentAccountProperty().get())==false){
+               this.giangDaysController.getCurrentAccountProperty().set(this.currentAccountProperty.get());
+           }
+       });
        
         
 
@@ -604,6 +629,19 @@ public class MainMenuFormController implements Initializable {
             }
         });
         
+         this.toggleButtonGiangDay.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                if (this.tabpaneContent.getTabs().contains(this.tabGiangDays) == false) {
+                    this.tabpaneContent.getTabs().add(this.tabGiangDays);
+                    this.tabpaneContent.selectionModelProperty().getValue().select(this.tabGiangDays);
+                }
+            } else {
+                if (this.tabpaneContent.getTabs().contains(this.tabGiangDays) == true) {
+                    this.tabpaneContent.getTabs().remove(this.tabGiangDays);
+                }
+            }
+        });
+        
 
         ///Binding đóng tab, mở tắt button///
         this.tabAccountses.setOnCloseRequest((event) -> {
@@ -656,6 +694,10 @@ public class MainMenuFormController implements Initializable {
         
         this.tabChuNhiems.setOnCloseRequest((event) -> {
             this.toggleButtonChuNhiem.setSelected(false);
+        });
+        
+        this.tabGiangDays.setOnCloseRequest((event) -> {
+            this.toggleButtonGiangDay.setSelected(false);
         });
       
 
