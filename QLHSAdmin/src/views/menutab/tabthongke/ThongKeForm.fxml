@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane fx:id="borderpaneRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@ThongKeStyleSheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabthongke.ThongKeController">
+<BorderPane fx:id="borderpaneRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="670.0" minWidth="1224.0" prefHeight="670.0" prefWidth="1224.0" style="-fx-background-color: rgba(34,34,34,1);" stylesheets="@FXML_Pane_TK_Stylesheets.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.menutab.tabthongke.ThongKeController">
    <center>
-      <ScrollPane fx:id="scrollpaneContent" fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER" />
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scrollpaneContent" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" pannable="true" style="-fx-background-color: rgba(34,34,34,1); -fx-border-color: rgba(34,34,34,1);" />
+            <VBox alignment="BOTTOM_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" spacing="10.0" style="-fx-background-color: rgba(34,34,34,0);" StackPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="buttonPrint" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: rgba(255,255,255,0.5);" text="P">
+                     <tooltip>
+                        <Tooltip text="In báo cáo thống kê" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="buttonUp" alignment="CENTER" layoutX="15.0" layoutY="640.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: rgba(255,255,255,0.5);" text="˄">
+                     <tooltip>
+                        <Tooltip text="Lên đầu" />
+                     </tooltip>
+                  </Button>
+               </children>
+               <StackPane.margin>
+                  <Insets right="20.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
    </center>
 </BorderPane>
