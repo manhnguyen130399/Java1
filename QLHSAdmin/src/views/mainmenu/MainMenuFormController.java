@@ -98,19 +98,19 @@ public class MainMenuFormController implements Initializable {
     private final ObjectProperty<Accounts> currentAccountProperty = new SimpleObjectProperty<>(null);
 
     private final Tab tabAccountses = new Tab("Accountses");
-    private final Tab tabCOs = new Tab("COs");
-    private final Tab tabChuNhiems = new Tab("ChuNhiems");
-    private final Tab tabGiangDays = new Tab("GiangDays");
-    private final Tab tabGiaoViens = new Tab("GiaoViens");
-    private final Tab tabHanhKiems = new Tab("HanhKiems");
-    private final Tab tabHocs = new Tab("Hocs");
-    private final Tab tabHocKi_NamHocs = new Tab("HocKi_NamHocs");
-    private final Tab tabHocLucs = new Tab("HocLucs");
-    private final Tab tabKQs = new Tab("KQs");
-    private final Tab tabKTs = new Tab("KTs");
-    private final Tab tabLops = new Tab("Lops");
-    private final Tab tabMonHocs = new Tab("MonHocs");
-    private final Tab tabThongKe = new Tab("ThongKe");
+    private final Tab tabCOs = new Tab("Học sinh");
+    private final Tab tabChuNhiems = new Tab("Chủ nhiệm");
+    private final Tab tabGiangDays = new Tab("Giảng dạy");
+    private final Tab tabGiaoViens = new Tab("Giáo viên");
+    private final Tab tabHanhKiems = new Tab("Hạnh kiểm");
+    private final Tab tabHocs = new Tab("Phân lớp");
+    private final Tab tabHocKi_NamHocs = new Tab("Học kì - Năm học");
+    private final Tab tabHocLucs = new Tab("Học lực");
+    private final Tab tabKQs = new Tab("Kết quả");
+    private final Tab tabKTs = new Tab("Nhập điểm");
+    private final Tab tabLops = new Tab("Lớp");
+    private final Tab tabMonHocs = new Tab("Môn học");
+    private final Tab tabThongKe = new Tab("Thống kê");
 
     private AccountsesController accountsesController;
     private COsController cosController;
