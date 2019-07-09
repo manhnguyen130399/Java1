@@ -124,16 +124,6 @@
                                                       <ComboBox fx:id="comboboxAddMaLop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose MaLop" />
                                                    </children>
                                                 </HBox>
-                                                <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="110.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
-                                                   <children>
-                                                      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="HocKi_NamHoc">
-                                                         <font>
-                                                            <Font size="12.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <ComboBox fx:id="comboboxAddHK_NH" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="380.0" promptText="Choose HocKi_NamHoc" />
-                                                   </children>
-                                                </HBox>
                                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="230.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" spacing="10.0">
                                                    <children>
                                                       <JFXButton fx:id="buttonAdd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Thêm">

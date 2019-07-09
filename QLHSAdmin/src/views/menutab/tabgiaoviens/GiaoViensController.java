@@ -170,7 +170,7 @@ public class GiaoViensController implements Initializable {
     }
 
     private void SetDataToList() {
-        if (currentAccountProperty.get() != null) {
+        if (currentAccountProperty.get()!=null) {
             tableviewGiaoViensFormController.setData(
                     (ArrayList<GiaoVien>) ((ArrayList<? extends Model>) GiaoVienController.getInstance()
                             .GetList(currentAccountProperty.get())));
@@ -182,6 +182,7 @@ public class GiaoViensController implements Initializable {
 
         }
     }
+    
 
     private void ResetDataAdd() {
         this.textfieldAddMaGV.setText("");
@@ -229,6 +230,7 @@ public class GiaoViensController implements Initializable {
             this.tableviewGiaoViens = fxmll.load();
             this.tableviewGiaoViensFormController = fxmll.getController();
             this.borderpaneContentTable.setCenter(this.tableviewGiaoViens);
+    
         } catch (IOException ex) {
             Logger.getLogger(MainMenuFormController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -382,7 +384,6 @@ public class GiaoViensController implements Initializable {
         this.buttonAddReset.setOnAction((event) -> {
             this.ResetDataAdd();
         });
-
         ///Chức năng xóa giáo viên///
         this.buttonDelete.setOnAction((event) -> {
             this.tableviewGiaoViensFormController.DeleteChoiseItems();
@@ -418,6 +419,7 @@ public class GiaoViensController implements Initializable {
         this.buttonEditReset.setOnAction((event) -> {
             this.ResetDataEdit();
         });
+        
 
         ///Chức năng tìm kiếm///
         this.buttonFind.setOnAction((event) -> {
@@ -477,7 +479,7 @@ public class GiaoViensController implements Initializable {
                 this.togglebuttonUnselectAll.setSelected(false);
             }
         }));
-
+       
         ///Chức năng reset khi nhấn delete///
         this.textfieldAddMaGV.setOnKeyPressed((event) -> {
             if (event.getCode().equals(KeyCode.DELETE)) {
@@ -558,11 +560,17 @@ public class GiaoViensController implements Initializable {
         });
 
         ///Reset data các from chức năng///
+      
         this.ResetDataAdd();
         this.ResetDataFind();
         this.ResetDataEdit();
+        
+        
+            
+        
 
         //Ần borderpane content list menu khi mở form///
         this.HideBorderpaneMenu(true);
+       
     }
 }

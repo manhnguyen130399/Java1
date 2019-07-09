@@ -80,8 +80,6 @@ public class ChuNhiemsController implements Initializable {
     @FXML
     private ComboBox<Lop> comboboxAddMaLop;
     @FXML
-    private ComboBox<HocKi_NamHoc> comboboxAddHK_NH;
-    @FXML
     private JFXButton buttonAdd;
     @FXML
     private JFXButton buttonAddReset;
@@ -168,7 +166,7 @@ public class ChuNhiemsController implements Initializable {
     private void ResetDataAdd() {
         this.comboboxAddMaGV.getSelectionModel().select(0);
         this.comboboxAddMaLop.getSelectionModel().select(0);
-        this.comboboxAddHK_NH.getSelectionModel().select(0);
+       
        
     }
 
@@ -212,8 +210,8 @@ public class ChuNhiemsController implements Initializable {
         this.comboboxAddMaGV.getItems().addAll((ArrayList<GiaoVien>) ((ArrayList<? extends Model>) GiaoVienController.getInstance().GetList()));
         this.comboboxAddMaLop.getItems().clear();
         this.comboboxAddMaLop.getItems().addAll((ArrayList<Lop>) ((ArrayList<? extends Model>) LopController.getInstance().GetList()));
-        this.comboboxAddHK_NH.getItems().clear();
-        this.comboboxAddHK_NH.getItems().addAll((ArrayList<HocKi_NamHoc>) ((ArrayList<? extends Model>) HocKi_NamHocController.getInstance().GetList()));
+      
+        //this.comboboxAddHK_NH.getItems().addAll((ArrayList<HocKi_NamHoc>) ((ArrayList<? extends Model>) HocKi_NamHocController.getInstance().GetList()));
        
       
         
@@ -296,14 +294,15 @@ public class ChuNhiemsController implements Initializable {
            
             GiaoVien gv=this.comboboxAddMaGV.getValue();
             Lop lop=this.comboboxAddMaLop.getValue();
-            HocKi_NamHoc hknh=this.comboboxAddHK_NH.getValue();
+            //HocKi_NamHoc hknh=this.comboboxAddHK_NH.getValue();
+      
             
 
             ChuNhiem model = new ChuNhiem(
                     gv.getMaGV(),
                     lop.getMaLop(),
-                    hknh.getNam(),
-                    hknh.getHocKi()
+                    HocKi_NamHocController.getInstance().GetCurrentHocKi_NamHoc().getNam(),
+                    HocKi_NamHocController.getInstance().GetCurrentHocKi_NamHoc().getHocKi()
                     );
                
                    

@@ -27,7 +27,7 @@ public class main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/views/viewscontroller/MainWindow.fxml"));
 
         ///Test login form///
-        //Parent root = FXMLLoader.load(getClass().getResource("/views/menutab/tabchunhiems/ChuNhiemsForm.fxml"));
+       // Parent root = FXMLLoader.load(getClass().getResource("/views/menutab/tabkqs/KQsTableForm.fxml"));
 
         ///Test Loading screen///
 //        FXMLLoader fxmll = new FXMLLoader(getClass().getResource("/views/loadingscreen/LoadingScreen.fxml"));
